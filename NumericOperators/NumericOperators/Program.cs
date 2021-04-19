@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 
 namespace NumericOperators
 {
@@ -6,7 +8,7 @@ namespace NumericOperators
     {
         static void Main(string[] args)
         {
-            PowersOfTwo_Example();
+            DivisionForFloat_ReturnsFloat();
         }
 
         public static void DivisionForIntegers_ReturnsIntegers()
@@ -92,6 +94,16 @@ namespace NumericOperators
             Console.WriteLine(a << 3);
 
             Console.WriteLine(a << 4);
+        }
+
+        public static void DivisionForFloat_ReturnsFloat()
+        {
+            int a = 3;
+            int b = 2;
+
+            float result = (float)a / b;
+
+            Console.WriteLine(result);
         }
     }
 }
